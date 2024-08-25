@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import './commands'
+const compareSnapshotCommand = require('cypress-image-diff-js/command');
+ 
+
+
+compareSnapshotCommand();
