@@ -21,6 +21,12 @@
         }
       })
     })
+
+      it('Screenshot for an element', () => {
+        cy.visit('https://example.cypress.io/')
+        cy.get('.caret').click().compareSnapshot('expanded-caret-element')
+      })
+    
   
 
 
