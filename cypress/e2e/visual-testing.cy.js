@@ -28,9 +28,13 @@
         cy.get('.dropdown-menu').compareSnapshot('expanded-caret-element')
         
       })
-    
+
+        it('Hide element and take screenshot', () => {
+          cy.visit('www.google.com')
+          //this will hide the image load and reduce the flakiness of the test case
+          cy.get('.lnXdpd').first().hideElement() // hideElement(false) to unhide
+          cy.compareSnapshot('search-bar-element')
+        })
   
-
-
 
   })
